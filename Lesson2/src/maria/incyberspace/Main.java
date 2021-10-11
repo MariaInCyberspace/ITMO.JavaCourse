@@ -1,6 +1,7 @@
 package maria.incyberspace;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -10,27 +11,27 @@ public class Main {
 
         // Ex. 1
 
-         getOddNumbers(1);
+        // getOddNumbers(1);
 
 
         // Ex. 2
 
-         getNumbersDivisibleBy3And5OrBoth();
+        // getNumbersDivisibleBy3And5OrBoth();
 
 
         // Ex. 3
-         System.out.println(calculateTwoInt());
+        // System.out.println(calculateTwoInt());
 
 
         // Ex. 4
-         System.out.println(findTheLargestNumber());
+        // System.out.println(findTheLargestNumber());
 
         // Ex. 5
          int[] sampleArr = {3, 4, 5, 3};
-         System.out.println(is3theFirstOrLastElementOfArray(sampleArr));
+        // System.out.println(is3theFirstOrLastElementOfArray(sampleArr));
 
         // Ex. 6
-         System.out.println(doesArrayContain1Or3(sampleArr));
+        // System.out.println(doesArrayContain1Or3(sampleArr));
 
     }
 
@@ -49,33 +50,35 @@ public class Main {
 
     // Ex. 2
     public static void getNumbersDivisibleBy3And5OrBoth() {
+        ArrayList<Integer> divBy3 = new ArrayList<Integer>();
+        ArrayList<Integer> divBy5 = new ArrayList<Integer>();
+        ArrayList<Integer> divByBoth = new ArrayList<Integer>();
 
-        System.out.print("Numbers divisible by both 3 and 5: ");
-        for (int i = 0; i <= 100; i++) {
-
+        for (int i = 1; i <= 100; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
-                System.out.print(i + " ");
+                divByBoth.add(i);
+            } else if (i % 5 == 0) {
+                divBy5.add(i);
+            } else if (i % 3 == 0) {
+                divBy3.add(i);
             }
         }
-
-        System.out.println("\t");
-
-        System.out.print("Numbers divisible by 3: ");
-        for (int i = 0; i <= 100; i++) {
-            if (i % 3 == 0) {
-                System.out.print(i + " ");
-            }
+        System.out.print("Numbers divisible by 3 (total count: " + divBy3.size() + "): ");
+        for (int i = 0; i < divBy3.size(); i++) {
+            System.out.print(divBy3.get(i) + " ");
         }
-
-        System.out.println("\t");
-
-        System.out.print("Numbers divisible by 5: ");
-        for (int i = 0; i <= 100; i++) {
-            if (i % 5 == 0) {
-                System.out.print(i + " ");
-            }
+        System.out.println(" ");
+        System.out.print("Numbers divisible by 5 (total count: " + divBy5.size() + "): ");
+        for (int i = 0; i < divBy5.size(); i++) {
+            System.out.print(divBy5.get(i) + " ");
+        }
+        System.out.println(" ");
+        System.out.print("Numbers divisible both by 3 and 5 (total count: " + divByBoth.size() + "): ");
+        for (int i = 0; i < divByBoth.size(); i++) {
+            System.out.print(divByBoth.get(i) + " ");
         }
     }
+
 
     // Ex. 3; A method that calculates the sum of two integers and returns either true or false depending on the sum being equal to the third number
     public static boolean calculateTwoInt() {
