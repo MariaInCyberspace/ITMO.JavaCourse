@@ -1,5 +1,7 @@
 package maria.incyberspace;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -7,18 +9,120 @@ public class Main {
     public static void main(String[] args) {
 
         // Ex. 1
-        getOddNumbers(1);
 
+         getOddNumbers(1);
+
+
+        // Ex. 2
+
+         getNumbersDivisibleBy3And5OrBoth();
+
+
+        // Ex. 3
+         System.out.println(calculateTwoInt());
+
+
+        // Ex. 4
+         System.out.println(findTheLargestNumber());
+
+        // Ex. 5
+         int[] sampleArr = {3, 4, 5, 3};
+         System.out.println(is3theFirstOrLastElementOfArray(sampleArr));
+
+        // Ex. 6
+         System.out.println(doesArrayContain1Or3(sampleArr));
 
     }
 
-    // A method that logs odd numbers to the console
+    // Ex. 1; A method that logs odd numbers to the console starting with the number given as a parameter and ending with 99
     public static void getOddNumbers(int input) {
 
         for (int i = input; i <= 100; i++) {
             if (i % 2 != 0) {
                 System.out.print(i + "\t");
             }
+            if (input >= 100) {
+                System.out.println("Number " + input + " is out of range");
+            }
         }
+    }
+
+    // Ex. 2
+    public static void getNumbersDivisibleBy3And5OrBoth() {
+
+        System.out.print("Numbers divisible by both 3 and 5: ");
+        for (int i = 0; i <= 100; i++) {
+
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+
+        System.out.println("\t");
+
+        System.out.print("Numbers divisible by 3: ");
+        for (int i = 0; i <= 100; i++) {
+            if (i % 3 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+
+        System.out.println("\t");
+
+        System.out.print("Numbers divisible by 5: ");
+        for (int i = 0; i <= 100; i++) {
+            if (i % 5 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+    // Ex. 3; A method that calculates the sum of two integers and returns either true or false depending on the sum being equal to the third number
+    public static boolean calculateTwoInt() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        int firstNumber = scanner.nextInt();
+        System.out.println("Enter the second number: ");
+        int secondNumber = scanner.nextInt();
+        System.out.println("Enter the third number: ");
+        int thirdNumber = scanner.nextInt();
+
+        if (firstNumber + secondNumber == thirdNumber) {
+            return true;
+        }
+        else return false;
+    }
+
+    // Ex. 4
+    public static boolean findTheLargestNumber() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        int firstNumber = scanner.nextInt();
+        System.out.println("Enter the second number: ");
+        int secondNumber = scanner.nextInt();
+        System.out.println("Enter the third number: ");
+        int thirdNumber = scanner.nextInt();
+
+        if (secondNumber > firstNumber && thirdNumber > secondNumber) {
+            return true;
+        }
+        else return false;
+    }
+
+    // Ex. 5
+    public static boolean is3theFirstOrLastElementOfArray(int[] array) {
+       if (array[0] == 3 || array[array.length -1] == 3) {
+           return true;
+       } else return false;
+    }
+
+    // Ex. 6
+    public static boolean doesArrayContain1Or3(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 1 || array[i] == 3) {
+                return true;
+            }
+        }
+        return false;
     }
 }
