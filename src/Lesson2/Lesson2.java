@@ -1,12 +1,11 @@
-package maria.incyberspace;
+package Lesson2;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
-
+public class Lesson2 {
     public static void main(String[] args) {
 
         // Ex. 1
@@ -27,7 +26,7 @@ public class Main {
         // System.out.println(findTheLargestNumber());
 
         // Ex. 5
-         int[] sampleArr = {3, 4, 5, 3};
+        int[] sampleArr = {3, 4, 5, 3};
         // System.out.println(is3theFirstOrLastElementOfArray(sampleArr));
 
         // Ex. 6
@@ -114,9 +113,9 @@ public class Main {
 
     // Ex. 5
     public static boolean is3theFirstOrLastElementOfArray(int[] array) {
-       if (array[0] == 3 || array[array.length -1] == 3) {
-           return true;
-       } else return false;
+        if (array[0] == 3 || array[array.length -1] == 3) {
+            return true;
+        } else return false;
     }
 
     // Ex. 6
@@ -128,4 +127,5 @@ public class Main {
         }
         return false;
     }
+
 }
