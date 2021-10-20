@@ -1,9 +1,6 @@
-package Lesson6;
+package maria.incyberspace.Lesson6;
 
-import java.sql.Time;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 public class Building {
     private int storeysNum;

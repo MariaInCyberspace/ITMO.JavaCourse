@@ -1,9 +1,8 @@
-package maria.incyberspace;
+package maria.incyberspace.Lesson1;
 
 import java.util.Scanner;
 
-public class Main {
-
+public class Lesson1Exercises {
     public static void main(String[] args) {
 
         // Ex. 1
@@ -43,4 +42,9 @@ public class Main {
             System.out.println(b + " is an odd number");
         }
     }
+
 }
+
+
+
+

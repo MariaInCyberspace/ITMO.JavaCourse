@@ -1,4 +1,4 @@
-package Lesson4;
+package maria.incyberspace.Lesson4;
 
 public class BubbleSortPractice {
 

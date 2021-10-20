@@ -1,4 +1,4 @@
-package Lesson5;
+package maria.incyberspace.Lesson5;
 
 import java.util.Arrays;
 

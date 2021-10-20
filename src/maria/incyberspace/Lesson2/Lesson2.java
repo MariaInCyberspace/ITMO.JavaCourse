@@ -1,4 +1,4 @@
-package Lesson2;
+package maria.incyberspace.Lesson2;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

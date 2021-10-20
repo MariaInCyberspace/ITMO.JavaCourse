@@ -1,11 +1,7 @@
-package Lesson6;
+package maria.incyberspace.Lesson6;
 
 // Ex. 1
 // Adding a constructor and testing its functionality
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 
 class Study {
 

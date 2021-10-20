@@ -1,4 +1,4 @@
-package Lesson6;
+package maria.incyberspace.Lesson6;
 
 public class Plane {
     class Wing {
