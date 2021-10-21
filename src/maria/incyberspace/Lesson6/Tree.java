@@ -1,5 +1,9 @@
 package maria.incyberspace.Lesson6;
 
+// Ex. 3
+// Create a Tree class with three types of constructor methods
+
+// Enum to be used to assign status to a Tree object using a constructor that takes 3 parameters
 enum Status {
     ALIVE, DEAD
 }
@@ -9,20 +13,24 @@ public class Tree {
     private int age;
     private Status status;
 
-    Tree(String name, int age) {
+    // Constructor with 2 parameters
+    public Tree(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    Tree(String name, int age, Status status) {
+    // Constructor with 3 parameters
+    public Tree(String name, int age, Status status) {
         this.name = name;
         this.age = age;
         this.status = status;
     }
 
-    Tree() {
+    // Constructor with no parameters
+    public Tree() {
         System.out.println("This is an empty constructor.");
     }
+
 
     @Override
     public String toString() {

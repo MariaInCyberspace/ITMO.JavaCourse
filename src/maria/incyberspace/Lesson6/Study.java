@@ -11,7 +11,7 @@ class Study {
         return this.course;
     }
 
-    Study(String course) {
+    public Study(String course) {
         this.course = course;
     }
 

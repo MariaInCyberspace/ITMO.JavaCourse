@@ -2,7 +2,11 @@ package maria.incyberspace.Lesson6;
 
 import java.util.Calendar;
 
+// Ex. 2
+// Create a Building class
+
 public class Building {
+    // Fields
     private int storeysNum;
     private int yearOfCompletion;
     private String name;
@@ -38,7 +42,7 @@ public class Building {
     }
 
     // Constructor with parameters
-    Building(String name, int yearOfCompletion, int storeysNum) {
+    public Building(String name, int yearOfCompletion, int storeysNum) {
         this.name = name;
         this.yearOfCompletion = yearOfCompletion;
         this.storeysNum = storeysNum;
@@ -49,11 +53,15 @@ public class Building {
     }
 
     public int yearsSinceCompletion() {
+        // Store the current calendar based on current time in the instance of a Calendar class
         Calendar current = Calendar.getInstance();
+        // Get the value for the given calendar field and store it in a variable of type 'int'
         int currentYear = current.get(Calendar.YEAR);
+        // Calculate the number of years passed since the building's completion
         return currentYear - yearOfCompletion;
     }
 
+    // Override toString() method
     @Override
     public String toString() {
         return this.name +

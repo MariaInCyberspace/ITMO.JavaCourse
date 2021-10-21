@@ -1,14 +1,19 @@
 package maria.incyberspace.Lesson6;
 
+// Ex. 4
+// Create an outer Plane class with an inner Wing subclass
+
 public class Plane {
     class Wing {
         private int weight;
 
-        Wing(int weight) {
+        // Constructor for the Wing class
+        public Wing(int weight) {
             this.weight = weight;
         }
 
-        void print() {
+        // A method that logs information about the weight of a particular plane wing to the console
+        public void print() {
             System.out.println("This wing weighs " + weight + " kg.");
         }
     }
