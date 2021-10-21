@@ -20,7 +20,7 @@ public class Vector {
         return Math.sqrt((xCoordinate * xCoordinate) + (yCoordinate * yCoordinate) + (zCoordinate * zCoordinate));
     }
 
-    // An instance method that finds the scalar product two vectors
+    // An instance method that finds the scalar product of two vectors
     public double findDotProduct(Vector vector) {
         return this.xCoordinate * vector.xCoordinate + this.yCoordinate * vector.yCoordinate + this.zCoordinate * vector.zCoordinate;
     }
