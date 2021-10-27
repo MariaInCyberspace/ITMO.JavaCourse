@@ -38,7 +38,6 @@ class Box extends Shape { // Container for shapes
         controlVolume += shape.getVolume(); // Update the controlVolume variable
         // Check that the volume of the box isn't exceeded
         if (controlVolume <= super.volume) { // by checking the volume field of our superclass we've initialized in the constructor
-            System.out.println(controlVolume);
             shapes.add(shape);
             return true;
         } else {
