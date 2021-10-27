@@ -26,7 +26,7 @@ class Box extends Shape { // Container for shapes
     private ArrayList<Shape> shapes; // Instantiate an ArrayList of Shapes to put shapes into
 
     public Box(double maxVol) { // Instantiates a new Shape object,
-        super.volume = maxVol; // initializes the 'volume' field pertinent to the superclass with the given value that represents maximum volume of the box
+        volume = maxVol; // initializes the 'volume' field pertinent to the superclass with the given value that represents maximum volume of the box
         shapes = new ArrayList<>(); // Initialize an ArrayList to put shapes into
     }
 
@@ -37,7 +37,7 @@ class Box extends Shape { // Container for shapes
     public boolean add(Shape shape) {
         controlVolume += shape.getVolume(); // Update the controlVolume variable
         // Check that the volume of the box isn't exceeded
-        if (controlVolume <= super.volume) { // by checking the volume field of our superclass we've initialized in the constructor
+        if (controlVolume <= volume) { // by checking the 'volume' field of our superclass we've initialized in the constructor
             shapes.add(shape);
             return true;
         } else {
@@ -70,10 +70,10 @@ class Pyramid extends Shape {
     private final String name = "Pyramid";
 
     public Pyramid(double baseArea, double height) {
-        super.name = name;
+        super.name = name; // Needed for the use of 'toString' method overridden in the superclass
         this.baseArea = baseArea;
         this.height = height;
-        super.volume = this.getVolume();
+        volume = this.getVolume(); // Store the calculated volume of this figure in the 'volume' field of the superclass
     }
 
     @Override
@@ -98,9 +98,9 @@ class Cylinder extends SolidOfRevolution {
 
     public Cylinder(double radius, double height) {
         super.radius = radius;
-        super.name = name;
+        super.name = name; // Needed for the use of 'toString' method overridden in the superclass
         this.height = height;
-        volume = this.getVolume();
+        volume = this.getVolume(); // Store the calculated volume of this figure in the 'volume' field of the superclass
     }
 
     @Override
@@ -114,8 +114,8 @@ class Ball extends SolidOfRevolution {
 
     public Ball(double radius) {
         super.radius = radius;
-        super.name = name;
-        volume = this.getVolume();
+        super.name = name; // Needed for the use of 'toString' method overridden in the superclass
+        volume = this.getVolume(); // Store the calculated volume of this figure in the 'volume' field of the superclass
     }
 
     @Override
