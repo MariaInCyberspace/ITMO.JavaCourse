@@ -6,10 +6,12 @@ import java.util.Map;
 public class ParkingLot {
     private Map<String, Section> sections;
 
+    // Sections get created upon construction of a Parking Lot object
     public ParkingLot() {
         sections = Section.createSections();
     }
 
+    // We look for a free parking space in the section that's specifically made for this type of vehicle and which contains a certain number of parking spaces
     public ParkingSpace findParkingSpaceFor(Vehicle vehicle) {
         VehicleType vehicleType = vehicle.vehicleType;
         ParkingSpace parkingSpace;

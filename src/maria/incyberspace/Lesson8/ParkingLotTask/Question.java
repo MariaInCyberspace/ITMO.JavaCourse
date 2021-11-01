@@ -7,8 +7,10 @@ import java.util.Locale;
 public class Question {
     public static void main(String[] args) {
         // Instantiate and initialize a new Parking Lot object
+        // Its constructor also creates all 7 sections of the lot pertaining to different vehicle types and having specified number of parking spaces
+        // So when a 'findParkingSpace' method is called, only a particular section of the parking lot will be checked
         ParkingLot parkingLot = new ParkingLot();
-        // Instantiate a new list of vehicle to be filled with some vehicles in the for-loop just below
+        // Instantiate a new list of vehicles to be filled with some vehicles in the for-loop just below
         List<Vehicle> vehicles = new ArrayList<>();
         for (int i = 0; i < AssortedMethods.randomIntInRange(15, 30); i++) {
             if (i < 5) {
