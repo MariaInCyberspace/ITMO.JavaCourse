@@ -1,4 +1,4 @@
-package maria.incyberspace.Lesson1;
+package maria.incyberspace.Lesson01;
 
 import java.util.Scanner;
 
