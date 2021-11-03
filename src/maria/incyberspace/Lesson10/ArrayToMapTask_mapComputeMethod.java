@@ -7,7 +7,6 @@ import java.time.ZoneId;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import java.util.function.BiFunction;
 
 public class ArrayToMapTask_mapComputeMethod {
     public static void main(String[] args) {
@@ -34,7 +33,7 @@ public class ArrayToMapTask_mapComputeMethod {
             // In this case the current value would be the number of times this specified key occurs in the array calculated by a BiFunction
             // Since the map isn't filled with <K, V> pairs upon first iteration, first 'V' returned by the remapping function would be 1
             // If the specified key occurs again, then it's a duplicate, and the remapping function will replace the value of this key, incrementing it by 1
-            map.compute(k, (k1, integer) -> integer == null ? 1 : integer + 1);
+            map.compute(k, (oldKey, newValue) -> newValue == null ? 1 : newValue + 1);
         }
         // Calculate time elapsed and log the result to the console
         Instant finish = Instant.now(Clock.tickMillis(ZoneId.systemDefault()));
