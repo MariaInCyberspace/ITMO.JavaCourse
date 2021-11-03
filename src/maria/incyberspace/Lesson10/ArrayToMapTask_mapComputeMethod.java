@@ -32,7 +32,8 @@ public class ArrayToMapTask_mapComputeMethod {
             // Call 'compute' method pertinent to Maps that takes two arguments: key and a remapping function
             // It would try to compute a mapping for the specified key and its current value
             // In this case the current value would be the number of times this specified key occurs in the array calculated by a BiFunction
-            // Function will return 1 if there's 1 occurrence and will increment if there's more
+            // Since the map isn't filled with <K, V> pairs upon first iteration, first 'V' returned by the remapping function would be 1
+            // If the specified key occurs again the remapping function will increment 'V' by 1
             map.compute(k, (k1, integer) -> integer == null ? 1 : integer + 1);
         }
         // Calculate time elapsed and log the result to the console
